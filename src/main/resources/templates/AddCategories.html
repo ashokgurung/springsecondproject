@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>add_categories</title>
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>
+	
+	<div class="container">
+		<div class="card">
+			<div class="card-header text-white text-center bg-primary">
+				<h4> Add Category </h4>
+			</div>
+			<div class="card-body">
+				<form  action="/addcategories" method="post">
+					<div class="row p-2">
+						<div class="col-4">Category Name</div>
+						<div class="col-6"> 
+							<input type="text" name="categoryName" class="form-control">
+						</div>
+					</div>
+					<div class="row p-2">
+						<div class="col-4"></div>
+						<div class="col-6"> 
+						<center><input type="submit" value="Add" class="btn btn-success"></center>
+						</div>
+					</div>
+				</form>
+				
+			</div>
+			<div class="card-footer text-white text-center bg-success">
+				<h4>copyright@2023</h4>			
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>

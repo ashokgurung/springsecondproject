@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.hymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>categories</title>
+
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>
+	
+	<div class="container">
+		<a th:href="@{/addcategories}" class="btn btn-info">Add Category</a>
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+					<th>S.N</th>
+					<th>Category Name</th>
+					<th>Action</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="c, iStat : ${categoryList}">
+					<th scope="row" th:text="${iStat.index + 1}">1</th>
+					<td>[[${c.categoryName}]]</td>
+					<td>
+						<a th:href="@{/cat/edit(id=${c.id})}"><input type="submit" value="Edit" class="btn btn-primary"></a>
+						<a th:href="@{/cat/delete(id=${c.id})}"><input type="submit" value="Delete" class="btn btn-danger"></a>
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+
+</body>
+</html>

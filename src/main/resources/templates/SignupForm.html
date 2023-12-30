@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>signup</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+
+</head>
+<flrbody>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center"> Signup Form </h1>
+				<div class="card-body">
+					<form action="/signup" method="post"> 
+						<div class="form-group">
+							<label>First Name</label>
+							<input
+							type="text"
+							name="fname"
+							class="form-control"
+							placeholder="Enter fname" required/>
+							</div>
+						<div class="form-group">
+							<label>Last Name</label>
+							<input
+							type="text"
+							name="lname"
+							class="form-control"
+							placeholder="Enter lname" required/>
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input
+							type="email"
+							name="email"
+							class="form-control"
+							placeholder="Enter Email" required/>
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input
+							type="password"
+							name="password"
+							class="form-control"
+							placeholder="Enter Password"required/>
+						</div>
+						
+						<div class="footer-body">
+							<center><button type="submit" class="btn btn-primary">Signup</button></center>
+						</div>
+					</form>
+					
+					<a href="/login">I am already memeber</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+      
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>products</title>
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>
+	
+	<div class="container p-2">
+		<a th:href="@{/addproduct}" class="btn btn-info">Add Product</a>
+		<a href="/prod/excel"><input type="submit" value="Excel" class="btn btn-success"></a>
+	    <a href="/prod/pdf"><input type="submit" value="PDF" class="btn btn-success"></a>
+		<table class="table">
+			
+			<thead class="thead-light">
+				<tr>
+					<th>S.N</th>
+					<th>Product Name</th>
+					<th>Price</th>
+					<th>Weight</th>
+					<th>Description</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="p,iStat : ${pList}">
+					<th scope="row" th:text="${iStat.index + 1}">1</th>
+							<td>[[${p.prod_name}]]</td>
+							<td>[[${p.price}]]</td>
+							<td>[[${p.weight}]]</td>
+							<td>[[${p.description}]]</td>
+							
+							<td> 
+								<a th:href="@{/prod/edit(id=${p.id})}"><input type="submit" value="Edit" class="btn btn-success"></a>
+								<a th:href="@{/prod/delete(id=${p.id})}"><input type="submit" value="Delete" class="btn btn-danger"></a>
+							</td>
+						</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>edit_products</title>
+</head>
+<body>
+	
+	<th:block th:insert="Header.html"></th:block>
+	
+	<div class="container">
+		
+	<div class="card">  
+		
+		<div class="card-header text-center text-white bg-primary">
+			
+			<h4>Edit Products</h4>
+		</div>
+		
+		<div class="card-body">
+			
+			<form action="/prod/update" method="post" th:object="${pObject}">
+			
+			<div class="row p-2">
+			        <div class="col-4">Product Name</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{prod_name}" class="form-control">
+				    </div>
+			</div>
+			
+			
+			<div class="row p-2">
+			        <div class="col-4">Price</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{price}" class="form-control">
+				    </div>
+			</div>
+			<div class="row p-2">
+			        <div class="col-4">Weight</div>
+				    <div class="col-6">
+										    
+				           <input type="number" th:field="*{weight}" class="form-control">
+				    </div>
+			</div>
+			<div class="row p-2">
+			        <div class="col-4">Description</div>
+				    <div class="col-6">
+										    
+				           <input type="text" th:field="*{description}" class="form-control">
+				    </div>
+			</div>
+			
+			<div class="row p-2">
+			        <div class="col-4"></div>
+				    <div class="col-6">
+										    
+				           <center><input type="submit" value="Update"  class="btn btn-success btn-lg"></center>
+				    </div>
+			</div>
+			
+			<input type="hidden" th:field="*{id}">
+			
+			</form>
+			
+			</div>
+		
+		<div class="card-footer text-center bg-warning">
+			
+			<h6>copyright@2023</h6>
+		</div>
+	</div>	
+		
+	</div>
+
+</body>
+</html>
